@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Track and manage your internship applications in one place with ApplyTrack."
+    />
+    <title>ApplyTrack | Internship Application Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="header-container">
+        <div>
+          <h1 class="title">ApplyTrack</h1>
+          <p class="subtitle">Your career, organised.</p>
+        </div>
+        <button class="cta-button" id="add-btn">+ Add application</button>
+      </header>
+
+      <section class="hero-section">
+        <h2>My applications</h2>
+        <p>Keep your internship search on track.</p>
+        <div class="stats-container">
+          <div class="stat-card">
+            <p>Total applications</p>
+            <span class="color-black" id="total-apps">12</span>
+          </div>
+          <div class="stat-card">
+            <p>Interviews</p>
+            <span class="color-purple">3</span>
+          </div>
+          <div class="stat-card">
+            <p>Awaiting reply</p>
+            <span class="color-orange">6</span>
+          </div>
+          <div class="stat-card">
+            <p>Offers</p>
+            <span class="color-green">1</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="recent-apps-section">
+        <h3>Recent applications</h3>
+
+        <ul class="application-list" id="app-list">
+          <li class="app-row">
+            <div class="company-info">
+              <p class="company-name">Pixel Studio</p>
+              <p class="job-role">Frontend Developer Intern</p>
+            </div>
+            <div class="badge applied-badge">Applied</div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+          <h3>Add New Application</h3>
+          <input
+            type="text"
+            id="company-input"
+            placeholder="Company Name"
+            class="modal-input"
+            required
+          />
+          <input
+            type="text"
+            id="role-input"
+            placeholder="Job Role"
+            class="modal-input"
+            required
+          />
+
+          <select id="status-input" class="modal-input">
+            <option value="applied">Applied</option>
+            <option value="interview">Interview</option>
+            <!-- <option value="offer">Offer</option> -->
+          </select>
+          <div style="display: flex; gap: 1rem; margin-top: 1rem">
+            <button id="cancel-btn" class="modal-btn">Cancel</button>
+            <button id="save-btn" class="cta-button">Save</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>
+<div class="task-card">
+  <h3></h3>
+  <button></button>
+</div>

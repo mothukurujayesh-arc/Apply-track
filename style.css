@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #333;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    min-height: 100vh;
+    margin: 0.5rem;
+}
+
+.main-container {
+    background-color: #edecfa;
+    border: none;
+    border-radius: 12px;
+    min-height: 98vh;
+    margin: 1rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.title {
+    color: #111827;
+    font-size: 1.7rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+.cta-button {
+    background-color: #5a52e5;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #cbcbda;
+    transition: transform 0.2s ease-out;
+
+}
+
+.cta-button:hover {
+    transform: translatey(-3px);
+}
+
+.hero-section {
+    /* background-color: rgb(201, 200, 200); */
+    padding: 1rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+
+}
+
+.stat-card {
+    border: none;
+    background-color: #ffffff;
+    height: 130px;
+    border-radius: 12px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.hero-section>h2 {
+    font-size: 1.9rem;
+    margin-bottom: 0.3em;
+}
+
+.hero-section>p {
+    color: #6b7280;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card>span {
+    font-size: 3rem;
+}
+
+
+.stat-card>p {
+    color: #6b7280;
+    font-size: 1.4rem;
+}
+
+.color-black {
+    color: #111827;
+}
+
+.color-purple {
+    color: #5a52e5;
+}
+
+.color-orange {
+    color: #d97706;
+}
+
+.color-green {
+    color: #059669;
+}
+
+.recent-apps-section {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+
+}
+
+.recent-apps-section>h3 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.application-list {
+    list-style: none;
+
+}
+
+.app-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.app-row+.app-row {
+    border-top: 1px solid lightgray;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-name {
+    color: #111827;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.job-role {
+    color: #6b7280;
+    font-size: 1.2rem;
+}
+
+.applied-badge {
+    background-color: #e0e7ff;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 25px;
+    color: #4338ca;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.interview-badge {
+    background-color: #d1fae5;
+    color: #047857;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal-overlay {
+    display: none;
+    /* Crucial: This keeps it hidden by default */
+    position: fixed;
+    /* Stays in place even if you scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Semi-transparent black background */
+    justify-content: center;
+    /* Centers the white box horizontally */
+    align-items: center;
+    /* Centers the white box vertically */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    max-width: 400px;
+    /* Keeps it looking nice on desktop */
+}
+
+.modal-btn {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.modal-btn:hover {
+    background-color: #f3f4f665;
+    transform: translatey(-3px);
+}
+
+.modal-input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #111827;
+    appearance: none;
+
+}
+
+select.modal-input {
+    appearance: none;
+    cursor: pointer;
+
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23111827%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem top 50%;
+    background-size: 0.65rem auto;
+    padding-right: 2.5rem;
+}
+
+.modal-input::placeholder {
+    color: #586b8c;
+}
+
+.modal-input:focus {
+    outline: 1px solid #5a52e5;
+}
+
+.modal-content>h3 {
+    color: #111827;
+    font-size: 1.5rem;
+}
+
+.delete-btn {
+    background-color: transparent;
+    color: #9ca3af;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+    color: #202020b4;
+}
+
+.badge-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        margin-bottom: 3rem;
+
+    }
+
+    .hero-section>h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section>p {
+        font-size: 0.9rem;
+    }
+
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .recent-apps-section>h3 {
+        font-size: 1.3rem;
+    }
+
+    .company-info>p {
+        font-size: 0.8rem;
+    }
+
+    .badge {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+
+    }
+
+}
